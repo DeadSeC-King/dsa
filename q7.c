@@ -7,11 +7,9 @@ int main() {
 
     printf("Enter number of elements in array: ");
     scanf("%d", &n);
-
-    // Dynamically allocate memory for n integers
     array = (int *)malloc(n * sizeof(int));
     if (array == NULL) {
-        printf("Memory allocation failed\n");
+        printf("Memory allocation failed \n");
         return 1;
     }
 
@@ -34,7 +32,6 @@ int main() {
         printf("%d not found in the array\n", search);
     }
 
-    // Free the allocated memory
     free(array);
 
     return 0;
