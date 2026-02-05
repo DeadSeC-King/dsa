@@ -11,9 +11,6 @@ void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
             nums1[p--] = nums2[p2--];
         }
     }
-
-    // If there are remaining elements in nums2, copy them.
-    // (If nums1 has remaining elements, they are already in place.)
     while (p2 >= 0) {
         nums1[p--] = nums2[p2--];
     }
