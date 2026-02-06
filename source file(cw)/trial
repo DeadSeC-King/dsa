@@ -1,0 +1,40 @@
+/*void insertAtBeginning(int data) {
+    struct Node* new = malloc(sizeof(struct Node));
+
+    new->data = data;
+    new->next = head;
+
+    head = new;
+}
+
+void insertAtEnd(int data) {
+    struct Node* new = malloc(sizeof(struct Node));
+    new->data = data;
+    new->next = NULL;
+
+    if (head == NULL) {
+        head = new;
+        return;
+    }
+
+    struct Node* temp = head;
+
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+
+    temp->next = new;
+}
+void insertAtPosition(int data, int pos) {
+    struct Node* new = malloc(sizeof(struct Node));
+    new->data = data;
+
+    struct Node* temp = head;
+
+    for (int i = 1; i < pos-1; i++) {
+        temp = temp->next;
+    }
+
+    new->next = temp->next;
+    temp->next = new;
+}*/
