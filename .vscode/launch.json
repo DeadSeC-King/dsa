@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Win11/OneDrive - UPES/2nd semester/dsa/dsa",
-      "program": "c:/Users/Win11/OneDrive - UPES/2nd semester/dsa/dsa/build/Debug/outDebug",
+      "cwd": "c:/Users/Win11/OneDrive - UPES/2nd semester/dsa/dsa/source file(cw)",
+      "program": "c:/Users/Win11/OneDrive - UPES/2nd semester/dsa/dsa/source file(cw)/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
