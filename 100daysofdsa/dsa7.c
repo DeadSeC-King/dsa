@@ -1,14 +1,16 @@
-//ite a recursive function fib(n) to compute the n-th Fibonacci number where fib(0)=0 and fib(1)=1.
+//write a recursive function fib(n) to compute the n-th Fibonacci number where fib(0)=0 and fib(1)=1.
 #include <stdio.h>
 #include <stdlib.h>
 int fib(int n) {
-    if (n == 0) {
-        return 0;
-    } else if (n == 1) {
-        return 1;
-    } else {
-        return fib(n - 1) + fib(n - 2);
+    if(n <= 1) return n;
+    int a = 0, b = 1, c;
+    for(int i = 2; i <= n; i++){
+        c = a + b;
+        a = b;
+        b = c;
     }
+
+    return b;
 }
 int main() {
     int n;
