@@ -97,7 +97,56 @@ void insert_position()
     temp->next->prev = newnode;
     temp->next = newnode;
 }
+void delete_position(){
+    int pos;
+    printf("Enter position to delete: ");
+    scanf("%d", &pos);
 
+    if(head == NULL)
+    {
+        printf("List is empty\n");
+        return;
+    }
+
+    if(pos == 1)
+    {
+        struct node *temp = head;
+
+        if(head->next == head)
+        {
+            head = NULL;
+        }
+        else
+        {
+            struct node *last = head->prev;
+
+            head = head->next;
+            last->next = head;
+            head->prev = last;
+        }
+
+        free(temp);
+        return;
+    }
+
+    struct node *temp = head;
+    for(int i = 1; i < pos && temp->next != head; i++)
+    {
+        temp = temp->next;
+    }
+
+    if(temp->next == head)
+    {
+        printf("Position out of bounds\n");
+        return;
+    }
+
+    temp->prev->next = temp->next;
+    temp->next->prev = temp->prev;
+
+    free(temp);
+
+}
 void display()
 {
     if(head == NULL)
@@ -134,7 +183,8 @@ int main()
             case 2: insert_begin(); break;
             case 3: insert_position(); break;
             case 4: display(); break;
-            case 5: exit(0);
+            case 5: delete_position();break;
+            case 6: exit(0);
             default: printf("Invalid choice\n");
         }
     }
