@@ -5,15 +5,9 @@ struct node {
     struct node *next;
 };
 struct node *head=NULL;
-void insertatbeg(int value){
+void insertbeg(int value){
     struct node *newnode;
     newnode=malloc(sizeof(struct node));
-    newnode->data=value;
-    newnode->next=head;
-    head=newnode;
-}
-void insertatend(int value){
-    struct node *newnode;
-    struct node *temp;
     
 }
+
