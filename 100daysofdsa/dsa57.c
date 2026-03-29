@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 // Definition of tree node
 struct Node {
     int data;
@@ -13,8 +12,7 @@ struct Node* newNode(int data) {
     node->data = data;
     node->left = NULL;
     node->right = NULL;
-    return node;
-}
+    return node;}
 // Function to convert tree to its mirror
 void mirror(struct Node* root) {
     if (root == NULL)
